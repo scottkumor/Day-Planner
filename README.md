@@ -1,7 +1,7 @@
 # Day Planner
 A simple day planner designed to keep a user pruductive without all the bells and whistles. It is meant to be used on a daily basis - simply click Clear All to start a new day!
 
-##Instructions
+## Instructions
 ### Making a Task
 - Select an hour block in which to add a task.
 - Type your task(s)
