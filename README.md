@@ -12,5 +12,5 @@ A simple day planner designed to keep a user pruductive without all the bells an
 - Click save to update Local Storage with empty (or reduced) string.
 - To delete all tasks, click the Claer All button. Local Storage will be completely deleted, and the page will refresh with empty boxes.
 
-# Code
+## Code
 This website was made with simple HTML/CSS/JS. It will be periodically updated to include modern techniques and frameworks.
