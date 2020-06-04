@@ -4,7 +4,7 @@ A simple day planner designed to keep a user pruductive without all the bells an
 ## Instructions
 ### Making a Task
 - Select an hour block in which to add a task.
-- Type your task(s)
+- Type your task(s).
 - Click Save. Your task is now saved in Local Storage as an Object. It will remain even on refresh.
 
 ### Deleting Tasks
