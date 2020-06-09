@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&family=Fredoka+One&family=Major+Mono+Display&display=swap');
+body {
+    background-color: #ff6d83;
+background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 100 60'%3E%3Cg fill-opacity='0.67'%3E%3Crect fill='%23ff6d83' width='11' height='11'/%3E%3Crect fill='%23ff6e82' x='10' width='11' height='11'/%3E%3Crect fill='%23ff6e80' y='10' width='11' height='11'/%3E%3Crect fill='%23ff6f7f' x='20' width='11' height='11'/%3E%3Crect fill='%23ff707e' x='10' y='10' width='11' height='11'/%3E%3Crect fill='%23ff717d' y='20' width='11' height='11'/%3E%3Crect fill='%23ff717b' x='30' width='11' height='11'/%3E%3Crect fill='%23ff727a' x='20' y='10' width='11' height='11'/%3E%3Crect fill='%23ff7379' x='10' y='20' width='11' height='11'/%3E%3Crect fill='%23ff7477' y='30' width='11' height='11'/%3E%3Crect fill='%23ff7576' x='40' width='11' height='11'/%3E%3Crect fill='%23ff7675' x='30' y='10' width='11' height='11'/%3E%3Crect fill='%23ff7773' x='20' y='20' width='11' height='11'/%3E%3Crect fill='%23ff7872' x='10' y='30' width='11' height='11'/%3E%3Crect fill='%23ff7971' y='40' width='11' height='11'/%3E%3Crect fill='%23ff7a6f' x='50' width='11' height='11'/%3E%3Crect fill='%23ff7b6e' x='40' y='10' width='11' height='11'/%3E%3Crect fill='%23ff7c6d' x='30' y='20' width='11' height='11'/%3E%3Crect fill='%23ff7d6b' x='20' y='30' width='11' height='11'/%3E%3Crect fill='%23ff7e6a' x='10' y='40' width='11' height='11'/%3E%3Crect fill='%23ff7f69' y='50' width='11' height='11'/%3E%3Crect fill='%23ff8068' x='60' width='11' height='11'/%3E%3Crect fill='%23ff8166' x='50' y='10' width='11' height='11'/%3E%3Crect fill='%23ff8265' x='40' y='20' width='11' height='11'/%3E%3Crect fill='%23ff8364' x='30' y='30' width='11' height='11'/%3E%3Crect fill='%23ff8562' x='20' y='40' width='11' height='11'/%3E%3Crect fill='%23ff8661' x='10' y='50' width='11' height='11'/%3E%3Crect fill='%23ff8760' x='70' width='11' height='11'/%3E%3Crect fill='%23ff885e' x='60' y='10' width='11' height='11'/%3E%3Crect fill='%23ff895d' x='50' y='20' width='11' height='11'/%3E%3Crect fill='%23ff8b5c' x='40' y='30' width='11' height='11'/%3E%3Crect fill='%23ff8c5a' x='30' y='40' width='11' height='11'/%3E%3Crect fill='%23ff8d59' x='20' y='50' width='11' height='11'/%3E%3Crect fill='%23ff8e58' x='80' width='11' height='11'/%3E%3Crect fill='%23ff9056' x='70' y='10' width='11' height='11'/%3E%3Crect fill='%23ff9155' x='60' y='20' width='11' height='11'/%3E%3Crect fill='%23ff9254' x='50' y='30' width='11' height='11'/%3E%3Crect fill='%23ff9453' x='40' y='40' width='11' height='11'/%3E%3Crect fill='%23ff9551' x='30' y='50' width='11' height='11'/%3E%3Crect fill='%23ff9650' x='90' width='11' height='11'/%3E%3Crect fill='%23ff984f' x='80' y='10' width='11' height='11'/%3E%3Crect fill='%23ff994e' x='70' y='20' width='11' height='11'/%3E%3Crect fill='%23ff9a4c' x='60' y='30' width='11' height='11'/%3E%3Crect fill='%23ff9c4b' x='50' y='40' width='11' height='11'/%3E%3Crect fill='%23ff9d4a' x='40' y='50' width='11' height='11'/%3E%3Crect fill='%23ff9e49' x='90' y='10' width='11' height='11'/%3E%3Crect fill='%23ffa048' x='80' y='20' width='11' height='11'/%3E%3Crect fill='%23ffa146' x='70' y='30' width='11' height='11'/%3E%3Crect fill='%23ffa345' x='60' y='40' width='11' height='11'/%3E%3Crect fill='%23ffa444' x='50' y='50' width='11' height='11'/%3E%3Crect fill='%23ffa543' x='90' y='20' width='11' height='11'/%3E%3Crect fill='%23ffa742' x='80' y='30' width='11' height='11'/%3E%3Crect fill='%23ffa841' x='70' y='40' width='11' height='11'/%3E%3Crect fill='%23ffaa40' x='60' y='50' width='11' height='11'/%3E%3Crect fill='%23ffab3f' x='90' y='30' width='11' height='11'/%3E%3Crect fill='%23ffac3e' x='80' y='40' width='11' height='11'/%3E%3Crect fill='%23ffae3d' x='70' y='50' width='11' height='11'/%3E%3Crect fill='%23ffaf3c' x='90' y='40' width='11' height='11'/%3E%3Crect fill='%23ffb13b' x='80' y='50' width='11' height='11'/%3E%3Crect fill='%23ffb23a' x='90' y='50' width='11' height='11'/%3E%3C/g%3E%3C/svg%3E");
+background-attachment: fixed;
+background-size: cover;
+    /* background by SVGBackgrounds.com */
+font-size: xx-large;
+display: flex;
+flex-direction: column;
+justify-content: center;
+    align-items: center;
+}
+
+#contentWrap {
+    display:flex;
+}
+
+section{
+    display: grid;
+    width: 80vw;
+    grid-template-columns: 0.5fr 4.5fr 0.5fr 0.5fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        ". . . ."
+        ". . . ."
+        ". . . ."
+        ". . . ."
+        ". . . ."
+        ". . . ."
+        ". . . ."
+        ". . . .";
+
+}
+
+textarea {
+    resize: none;
+    overflow-y: scroll;
+}
+
+header {
+    font-size: large;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1vh;
+}
+
+#user{
+    display:inline-block;
+}
+#wipe {
+    width: auto;
+}
+
+.greeting {
+    font-family: 'Fredoka One', cursive;
+    margin: 1vh;
+
+}
+
+.dateTime {
+    font-family: 'Major Mono Display', monospace;
+    text-transform: lowercase;
+
+}
+
+/* font-family: 'Balsamiq Sans', cursive;
+font-family: 'Fredoka One', cursive; */
+
+
+
+.hourWrap {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.hourBox{
+    background-color: white;
+    font-family: 'Balsamiq Sans', cursive;
+    padding: 1vw;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.save, .clear, #wipe {
+    font-size: xx-large;
+}
+
+#wipe {
+    padding: 0 25px 0 25px;
+}
