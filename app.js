@@ -1,46 +1,18 @@
+/* local storage as global variable so it can tansverse through all functions */
+var dailyTasks = JSON.parse(localStorage.getItem("items")) || {};
+
 $(document).ready(function () {
-  var dailyTasks = JSON.parse(localStorage.getItem("myDay")) || {};
 
-  $(".save").on("click", function () {
-    event.stopPropagation();
-    event.stopImmediatePropagation();
-    /* get the key and the value */
-    var key = $(this).data("key");
-    var value = $(`#${key}`).val();
+  getDate(); // get date 
+  getTime(); //get time 
+  colorBoxes(); //color code the boxes based on what time it is
 
-    console.log(this);
+  populate(); // populate data where it needs to go based on key:value pairs from dailyTasks
+  save();  // listener, saves individual task
+  clear(); // listener, clears individual task
+  wipe(); // listener, clears loacal storage and all fields
 
-    // save it local storage
-    dailyTasks[key] = value;
-    localStorage.setItem("myDay", JSON.stringify(dailyTasks));
-  });
-
-  /* init */
-  /* pull from local storage */
-  $("#hour-9").val(dailyTasks["hour-9"]);
-  $("#hour-10").val(dailyTasks["hour-10"]);
-  $("#hour-11").val(dailyTasks["hour-11"]);
-  $("#hour-12").val(dailyTasks["hour-12"]);
-  $("#hour-1").val(dailyTasks["hour-1"]);
-  $("#hour-2").val(dailyTasks["hour-2"]);
-  $("#hour-3").val(dailyTasks["hour-3"]);
-  $("#hour-4").val(dailyTasks["hour-4"]);
-  $("#hour-5").val(dailyTasks["hour-5"]);
-
-  $("#wipe").on("click", function () {
-
-    localStorage.clear();
-    document.location.reload(true)
-  });
-
-
-
-
-  getDate();
-  getTime();
-  colorBoxes();
 });
-
 
 
 function getDate() {
@@ -55,7 +27,6 @@ function getTime() {
   setTimeout(getTime, 500);
 };
 
-
 function colorBoxes() {
 
   var currentHour = moment().hours(); //gets current hour
@@ -64,8 +35,8 @@ function colorBoxes() {
   var boxes = []; //empty array to store box data
 
   $(".hourBox").each(function () {
-    var key = $(this).data("key"); 
-    var box = $(this);              
+    var key = $(this).data("key");
+    var box = $(this);
 
     keys.push(key)
     boxes.push(box)
@@ -96,4 +67,65 @@ function colorBoxes() {
   }
 
   setTimeout(colorBoxes, 1000); //updates every second
+};
+
+
+function populate() {
+  $("#hour-9").val(dailyTasks["hour-9"]);
+  $("#hour-10").val(dailyTasks["hour-10"]);
+  $("#hour-11").val(dailyTasks["hour-11"]);
+  $("#hour-12").val(dailyTasks["hour-12"]);
+  $("#hour-1").val(dailyTasks["hour-1"]);
+  $("#hour-2").val(dailyTasks["hour-2"]);
+  $("#hour-3").val(dailyTasks["hour-3"]);
+  $("#hour-4").val(dailyTasks["hour-4"]);
+  $("#hour-5").val(dailyTasks["hour-5"]);
+}
+
+function save() {
+  $(".save").on("click", function () {
+
+    /* get the key and the value */
+    var key = $(this).data("key");
+    var value = $(`#${key}`).val();
+
+    // save it local storage
+    dailyTasks[key] = value;
+    localStorage.setItem("items", JSON.stringify(dailyTasks));
+
+  });
+}
+
+function clear() {
+  $(".clear").on("click", function () {
+
+    // get the key    
+    var key = $(this).data("key");
+
+    // set the value of the key to an empty string
+    dailyTasks[key] = '';
+
+    // re-write local storage now that the value specified is deleted
+    localStorage.setItem("items", JSON.stringify(dailyTasks));
+
+    // re-populates from local storage and displays persistent data in boxes
+    populate();
+  });
+};
+
+function wipe() {
+  $("#wipe").on("click", function () {
+
+    // for each textarea, gabs the keys and sets their values to empty strings, then re-populates
+    $(".textBox").each(function () {
+
+      var key = $(this).attr("id");
+
+      dailyTasks[key] = '';
+
+      localStorage.setItem("items", JSON.stringify(dailyTasks));
+      populate();
+
+    });
+  });
 };
