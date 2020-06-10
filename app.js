@@ -9,6 +9,7 @@ $(document).ready(function () {
 
   populate(); // populate data where it needs to go based on key:value pairs from dailyTasks
   save();  // listener, saves individual task
+  autoSave();
   clear(); // listener, clears individual task
   wipe(); // listener, clears loacal storage and all fields
 
@@ -48,16 +49,24 @@ function colorBoxes() {
     value = keys[i]
     if (value < currentHour) {
       if (boxes[i].data("key") === value) {
-        boxes[i].attr('style', 'background-color: red')
+        // box itself
+        boxes[i].attr('style', 'background: linear-gradient(to right, white 80%, lightcoral);');
+        // next sibling, textareas
+        boxes[i].next().attr('disabled','disabled');
+        boxes[i].next().attr('style','overflow-y:hidden');
+        boxes[i].next().attr('placeholder','It is too late to add a new task here.');
+        // siblings after textarea, disabling both buttons
+        boxes[i].next().next().attr('disabled','disabled');
+        boxes[i].next().next().next().attr('disabled','disabled')
       };
     }
     if (value === currentHour) {
       if (boxes[i].data("key") === value) {
-        boxes[i].attr('style', 'background-color: yellow')
+        boxes[i].attr('style', 'background: linear-gradient(to right, white 80%, sandybrown);')
       };
     } else if (value > currentHour) {
       if (boxes[i].data("key") === value) {
-        boxes[i].attr('style', 'background-color: green')
+        boxes[i].attr('style', 'background: linear-gradient(to right, white 80%, green);')
       };
     }
     // loops through each key grabbed. if the boxes data-key matches the value which
@@ -80,7 +89,7 @@ function populate() {
   $("#hour-3").val(dailyTasks["hour-3"]);
   $("#hour-4").val(dailyTasks["hour-4"]);
   $("#hour-5").val(dailyTasks["hour-5"]);
-}
+};
 
 function save() {
   $(".save").on("click", function () {
@@ -95,6 +104,12 @@ function save() {
 
   });
 }
+
+function autoSave() {
+  $("textarea").keyup(function () {
+    $('.save').click();
+  });
+};
 
 function clear() {
   $(".clear").on("click", function () {

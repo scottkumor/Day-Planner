@@ -18,6 +18,7 @@ justify-content: center;
 
 section{
     display: grid;
+    gap:0;
     width: 80vw;
     grid-template-columns: 0.5fr 4.5fr 0.5fr 0.5fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
@@ -50,18 +51,18 @@ header {
 #user{
     display:inline-block;
 }
-#wipe {
-    width: auto;
-}
+
 
 .greeting {
     font-family: 'Fredoka One', cursive;
+    font-size: xx-large;
     margin: 1vh;
 
 }
 
 .dateTime {
     font-family: 'Major Mono Display', monospace;
+    font-size: x-large;
     text-transform: lowercase;
 
 }
@@ -77,19 +78,41 @@ font-family: 'Fredoka One', cursive; */
     align-items: center;
 }
 
-.hourBox{
+.hourBox {
+    box-sizing: border-box;
     background-color: white;
     font-family: 'Balsamiq Sans', cursive;
+    text-align: center;
+    vertical-align: bottom;
     padding: 1vw;
     white-space: nowrap;
-    vertical-align: middle;
-    text-align: right;
+    border-bottom: solid black 1px;
+    border-right: solid black 1px;
+
+    
 }
 
 .save, .clear, #wipe {
     font-size: xx-large;
+    cursor: pointer;
+}
+
+.save {
+    color: darkgreen;
+}
+
+.clear {
+    color: coral;
+}
+.save:disabled, .clear:disabled {
+    color: black;
+    background-color: white;
+    opacity: .5;
+    border:1px solid gray;
+    cursor: default;
 }
 
 #wipe {
-    padding: 0 25px 0 25px;
-}
+    padding: 0 2vw 0 2vw;
+    color: crimson;
+};
