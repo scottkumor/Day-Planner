@@ -69,7 +69,9 @@ header {
 
 /* font-family: 'Balsamiq Sans', cursive;
 font-family: 'Fredoka One', cursive; */
-
+.textBox {
+    font-family: 'Fredoka One', cursive;
+}
 
 
 .hourWrap {
